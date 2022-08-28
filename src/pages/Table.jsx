@@ -1,10 +1,11 @@
 import React from "react";
 import TableComponent from "../components/TableComponent";
 import withTable from "../_hoc/withTable";
-function Table() {
+function Table(props) {
+  // props received from withTable component higher order componenet
   return (
     <div>
-      <TableComponent />
+      <TableComponent {...props} />
     </div>
   );
 }

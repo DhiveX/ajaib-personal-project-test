@@ -1,5 +1,5 @@
 const initialState = {
-  name: "",
+  dataFetch: [],
 };
 const tableReducer = (state = initialState, action) => {
   const { type, payload } = action;
@@ -7,7 +7,7 @@ const tableReducer = (state = initialState, action) => {
     case "GET_DATA":
       return {
         ...state,
-        name: [...state.name, payload],
+        dataFetch: payload,
       };
     default:
       return {
