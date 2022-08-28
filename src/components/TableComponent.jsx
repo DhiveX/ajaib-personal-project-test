@@ -30,12 +30,28 @@ const columns = [
 ];
 
 export default function TableComponent(props) {
+  function handleFilter(value) {
+    const temporaryFilterList = { ...value };
+    props.setFilter(temporaryFilterList);
+  }
+
+  const handlePageChange = (page, perPage) => {
+    let tempValue = props.appliedFilter;
+    tempValue.page = page;
+    handleFilter(tempValue);
+    props.applyFilter();
+  };
+
   return (
     <>
       <DataTable
+        keyField={1}
         columns={columns}
         progressPending={props.isLoading}
         data={props.dataFetch}
+        pagination
+        paginationComponentOptions={{ noRowsPerPage: true }}
+        onChangePage={handlePageChange}
       />
     </>
   );
