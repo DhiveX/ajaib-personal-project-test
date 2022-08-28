@@ -45,15 +45,26 @@ export default function TableFilter(props) {
     props.applyFilter();
   };
   return (
-    <div>
-      <form id="formFilter">
-        <input type="text" onChange={handleKeyword}></input>
-        <select onChange={handleGender}>
+    <div className="mb-6">
+      <form className="flex gap-[20px] flex-wrap justify-end" id="formFilter">
+        <input
+          type="text"
+          placeholder="I'm a Search Bar"
+          onChange={handleKeyword}
+          className="rounded-lg !border-white-700 border-2 p-2 shadow-xl"
+        ></input>
+        <select
+          onChange={handleGender}
+          className="rounded-lg !border-white-700 border-2 p-2 shadow-xl text-gray-500"
+        >
           <option value="">--select gender--</option>
           <option value="female">female</option>
           <option value="male">male</option>
         </select>
-        <select onChange={handleSortBy}>
+        <select
+          onChange={handleSortBy}
+          className="rounded-lg !border-white-700 border-2 p-2 shadow-xl text-gray-500"
+        >
           <option value="">--select sort by--</option>
           <option value="username">username</option>
           <option value="name">name</option>
@@ -61,15 +72,26 @@ export default function TableFilter(props) {
           <option value="gender">gender</option>
           <option value="registeredDate">registered date</option>
         </select>
-        <select onChange={handleSortOrder}>
+        <select
+          onChange={handleSortOrder}
+          className="rounded-lg !border-white-700 border-2 p-2 shadow-xl text-gray-500"
+        >
           <option value="">--select sort order--</option>
           <option value="ascend">ascending</option>
           <option value="descend">descending</option>
         </select>
-        <button type="button" onClick={() => props.applyFilter()}>
+        <button
+          className="rounded-lg text-blue-600 !border-white-700 border-2 p-2 shadow-xl bg-white"
+          type="button"
+          onClick={() => props.applyFilter()}
+        >
           Apply Filter
         </button>
-        <button type="button" onClick={() => handleResetFilter()}>
+        <button
+          className="rounded-lg text-blue-600 !border-white-700 border-2 p-2 shadow-xl bg-white"
+          type="button"
+          onClick={() => handleResetFilter()}
+        >
           Reset Filter
         </button>
       </form>
