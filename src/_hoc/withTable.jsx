@@ -67,8 +67,10 @@ const withTable = (WrappedComponent) => {
     }
 
     useEffect(() => {
-      fetchData();
-    }, []);
+      if (dataRedux.length < 1) {
+        fetchData();
+      }
+    });
 
     return (
       <>
