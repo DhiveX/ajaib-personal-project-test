@@ -47,39 +47,52 @@ export default function TableFilter(props) {
   return (
     <div className="mb-6">
       <form className="flex gap-[20px] flex-wrap justify-end" id="formFilter">
-        <input
-          type="text"
-          placeholder="I'm a Search Bar"
-          onChange={handleKeyword}
-          className="rounded-lg !border-white-700 border-2 p-2 shadow-xl"
-        ></input>
-        <select
-          onChange={handleGender}
-          className="rounded-lg !border-white-700 border-2 p-2 shadow-xl text-gray-500"
-        >
-          <option value="">--select gender--</option>
-          <option value="female">female</option>
-          <option value="male">male</option>
-        </select>
-        <select
-          onChange={handleSortBy}
-          className="rounded-lg !border-white-700 border-2 p-2 shadow-xl text-gray-500"
-        >
-          <option value="">--select sort by--</option>
-          <option value="username">username</option>
-          <option value="name">name</option>
-          <option value="email">email</option>
-          <option value="gender">gender</option>
-          <option value="registeredDate">registered date</option>
-        </select>
-        <select
-          onChange={handleSortOrder}
-          className="rounded-lg !border-white-700 border-2 p-2 shadow-xl text-gray-500"
-        >
-          <option value="">--select sort order--</option>
-          <option value="ascend">ascending</option>
-          <option value="descend">descending</option>
-        </select>
+        <div className="flex-col flex">
+          <label className="text-white font-bold">Seach</label>
+          <input
+            type="text"
+            placeholder="I'm a Search Bar"
+            onChange={handleKeyword}
+            className="rounded-lg !border-white-700 border-2 p-2 shadow-xl"
+          ></input>
+        </div>
+        <div className="flex-col flex">
+          <label className="text-white font-bold">Filter By Gender</label>
+          <select
+            onChange={handleGender}
+            className="rounded-lg !border-white-700 border-2 p-2 shadow-xl text-gray-500"
+          >
+            <option value="">--select gender--</option>
+            <option value="female">female</option>
+            <option value="male">male</option>
+          </select>
+        </div>
+        <div className="flex-col flex">
+          <label className="text-white font-bold">Sort By</label>
+          <select
+            onChange={handleSortBy}
+            className="rounded-lg !border-white-700 border-2 p-2 shadow-xl text-gray-500"
+          >
+            <option value="">--select sort by--</option>
+            <option value="username">username</option>
+            <option value="name">name</option>
+            <option value="email">email</option>
+            <option value="gender">gender</option>
+            <option value="registeredDate">registered date</option>
+          </select>
+        </div>
+        <div className="flex-col flex">
+          <label className="text-white font-bold">Sort Order</label>
+          <select
+            onChange={handleSortOrder}
+            className="rounded-lg !border-white-700 border-2 p-2 shadow-xl text-gray-500"
+          >
+            <option value="">--select sort order--</option>
+            <option value="ascend">ascending</option>
+            <option value="descend">descending</option>
+          </select>
+        </div>
+
         <button
           className="rounded-lg text-blue-600 !border-white-700 border-2 p-2 shadow-xl bg-white"
           type="button"
