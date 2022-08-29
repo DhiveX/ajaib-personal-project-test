@@ -1,4 +1,3 @@
-
 # Ajaib Personal Project Test
 
 i made this Project using standard Create-React-App Application
@@ -11,7 +10,6 @@ for install the dependencies
 npm install
 ```
 
-
 ## API Reference
 
 #### Get all items
@@ -20,16 +18,16 @@ npm install
   GET https://randomuser.me/api
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `page` | `number` | Page number |
-| `pageSize` | `number` | specific item perPage |
-| `gender` | `string` | female / male |
-| `keyword` | `string` | search keyword |
-| `sortBy` | `string` | Sort By Field |
-| `sortOrder` | `ascend / descend` | Sort order |
-| `results` | `number` | Total Item on Fetching |
-| `seed` | `ajaib` | lock the response for not randoming data every refetching |
+| Parameter   | Type               | Description                                               |
+| :---------- | :----------------- | :-------------------------------------------------------- |
+| `page`      | `number`           | Page number                                               |
+| `pageSize`  | `number`           | specific item perPage                                     |
+| `gender`    | `string`           | female / male                                             |
+| `keyword`   | `string`           | search keyword                                            |
+| `sortBy`    | `string`           | Sort By Field                                             |
+| `sortOrder` | `ascend / descend` | Sort order                                                |
+| `results`   | `number`           | Total Item on Fetching                                    |
+| `seed`      | `ajaib`            | lock the response for not randoming data every refetching |
 
 ## Features
 
@@ -48,9 +46,9 @@ npm install
 - React Data Table Components
 - RandomUser API
 - Tailwind CSS
-
+- JEST
+- React Testing Library (RTL)
 
 ## Demo
 
 Here is the Demo Link for you :) https://ajaib-personal-project-test.netlify.app/
-
