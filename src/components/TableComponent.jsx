@@ -44,15 +44,17 @@ export default function TableComponent(props) {
 
   return (
     <>
-      <DataTable
-        keyField={1}
-        columns={columns}
-        progressPending={props.isLoading}
-        data={props.dataFetch}
-        pagination
-        paginationComponentOptions={{ noRowsPerPage: true }}
-        onChangePage={handlePageChange}
-      />
+      <div data-testid="tableComponent">
+        <DataTable
+          keyField={1}
+          columns={columns}
+          progressPending={props.isLoading}
+          data={props.dataFetch}
+          pagination
+          paginationComponentOptions={{ noRowsPerPage: true }}
+          onChangePage={handlePageChange}
+        />
+      </div>
     </>
   );
 }

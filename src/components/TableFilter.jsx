@@ -45,7 +45,7 @@ export default function TableFilter(props) {
     props.applyFilter();
   };
   return (
-    <div className="mb-6">
+    <div className="mb-6" data-testid="tableFilter">
       <form className="flex gap-[20px] flex-wrap justify-end" id="formFilter">
         <div className="flex-col flex">
           <label className="text-white font-bold">Seach</label>
@@ -94,6 +94,7 @@ export default function TableFilter(props) {
         </div>
 
         <button
+          data-testid="applyFilterButton"
           className="rounded-lg text-blue-600 !border-white-700 border-2 p-2 shadow-xl bg-white"
           type="button"
           onClick={() => props.applyFilter()}
@@ -101,6 +102,7 @@ export default function TableFilter(props) {
           Apply Filter
         </button>
         <button
+          data-testid="resetFilterButton"
           className="rounded-lg text-blue-600 !border-white-700 border-2 p-2 shadow-xl bg-white"
           type="button"
           onClick={() => handleResetFilter()}

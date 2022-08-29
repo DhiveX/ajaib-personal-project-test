@@ -6,7 +6,7 @@ function Table(props) {
   // props received from withTable component higher order componenet
   return (
     <div className="p-[40px] ">
-      <div className="flex items-center mb-6">
+      <div data-testid="tableComponent" className="flex items-center mb-6">
         <div className="flex gap-2 items-center w-1/6">
           <picture>
             <img
